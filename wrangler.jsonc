@@ -1,0 +1,8 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "todolist",
+  "compatibility_date": "2026-09-16",
+  "assets": {
+    "directory": "dist"
+  }
+}
