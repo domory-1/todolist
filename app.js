@@ -6,17 +6,10 @@ if(!browserId){
   localStorage.setItem(browserIdentityKey,browserId);
 }
 const storageKey = `${legacyStorageKey}:${browserId}`;
-const sampleTasks = [
-  { id: 1, title: '去看一次橘子色的日落', done: false },
-  { id: 2, title: '好好吃一顿喜欢的饭', done: true },
-  { id: 3, title: '读完那本想读很久的书', done: false },
-  { id: 4, title: '给自己买一束花', done: true },
-  { id: 5, title: '在晴天散一次步', done: false },
-];
 let tasks = JSON.parse(localStorage.getItem(storageKey) || 'null');
 if(!tasks){
   const legacyTasks = JSON.parse(localStorage.getItem(legacyStorageKey) || 'null');
-  tasks = legacyTasks || sampleTasks;
+  tasks = legacyTasks || [];
   localStorage.setItem(storageKey,JSON.stringify(tasks));
 }
 const $ = (id) => document.getElementById(id);
@@ -35,6 +28,7 @@ function render(){
   const done = tasks.filter(t => t.done); const ordered = [...tasks].sort((a,b) => Number(b.done) - Number(a.done));
   $('taskList').innerHTML = ordered.map(t => `<li class="task ${t.done ? 'done completed-task' : ''}" data-id="${t.id}" style="view-transition-name: wish-${t.id}"><button class="check" type="button" aria-label="${t.done ? '设为未完成' : '完成'}" aria-pressed="${t.done}"></button><span class="task-name">${escapeHtml(t.title)}</span></li>`).join('');
   $('taskList').classList.toggle('dense',ordered.length>8);
+  $('emptyHint').hidden = ordered.length>0;
   renderStars(done);
 }
 function renderStars(done){
