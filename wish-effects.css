@@ -1,0 +1,18 @@
+.wish-effects{position:absolute;inset:0;z-index:4;overflow:hidden;pointer-events:none;border-radius:inherit}
+.wish-effect{position:absolute;width:0;height:0;pointer-events:none}
+.nova-halo,.nova-core,.nova-ring,.nova-ray,.wish-spark,.meteor-flight,.meteor-tail,.meteor-core{position:absolute;display:block;pointer-events:none}
+.nova-halo{width:210px;height:210px;left:-105px;top:-105px;border-radius:50%;background:radial-gradient(circle,#fff5d855,#eacb9a25 18%,#7b9ad622 42%,transparent 70%);mix-blend-mode:screen}
+.nova-core{width:52px;height:52px;left:-26px;top:-26px;border-radius:50%;background:radial-gradient(circle,#fffefa 0%,#fff5d5 8%,#ffe2a780 22%,#aabfff33 46%,transparent 70%);filter:drop-shadow(0 0 12px #efcf9a66)}
+.nova-ring{width:70px;height:70px;left:-35px;top:-35px;border:1px solid #e7d2ac99;border-radius:50%;box-shadow:0 0 9px #9ebeff33,inset 0 0 8px #efcf9a22}
+.nova-ray{width:150px;height:1px;left:-75px;top:-.5px;background:linear-gradient(90deg,transparent,#ffe6b5bb,transparent)}
+.wish-spark{width:3px;height:3px;left:-1.5px;top:-1.5px;border-radius:50%;background:#ffe9c2;box-shadow:0 0 6px #ffdca1aa}
+.wish-spark.cool{background:#d1e3ff;box-shadow:0 0 5px #a8c8ffaa}
+.meteor-tail{left:-115px;top:-1px;width:115px;height:2px;transform-origin:right center;background:linear-gradient(90deg,transparent,#98b7ee55 35%,#ffdf9bcc 85%,#fff7e7);border-radius:100%;box-shadow:0 0 7px #d9dcff66}
+.meteor-core{left:-5px;top:-5px;width:10px;height:10px;border-radius:50%;background:radial-gradient(circle,#fffef3 10%,#ffe4b3bb 30%,#c1d5ff33 65%,transparent);box-shadow:0 0 16px #efcf9a66}
+.todo-page .task.arriving{animation:wish-arrive 1.5s ease-out both}
+.todo-page .task.completing{border-color:#d7bc8944}
+.todo-page .check{position:relative}
+.todo-page .check:focus-visible{outline:2px solid #d7bc89;outline-offset:4px}
+.todo-page .task.done .check:after{content:"";width:3px;height:3px;border-radius:50%;background:#dec79b;box-shadow:0 0 7px #dec79b66}
+@keyframes wish-arrive{0%{border-color:#f4ddaf99;box-shadow:0 0 26px #e5c89630;background:#bfa47320}40%{border-color:#cdb88f66;box-shadow:0 0 16px #afc6ff14}100%{border-color:#b7c8e817;box-shadow:0 6px 20px #0000000c;background:#111a2a70}}
+@media(prefers-reduced-motion:reduce){.todo-page .task.arriving{animation:none}.todo-page .task.completing{transition:none}}

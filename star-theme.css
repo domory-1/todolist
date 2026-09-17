@@ -1,0 +1,32 @@
+:root{color-scheme:dark}
+body{background:radial-gradient(ellipse at 50% 20%,#1b2034 0,#0b101c 55%,#070b12 100%);color:#e2e6ef}
+.app-card{background:#010205;border:1px solid #ffffff12;box-shadow:0 28px 85px #0007}
+.ambient{display:none}
+.todo-universe-backdrop{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.todo-universe-backdrop:after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,#080d1877 0,#080d181f 35%,#080d1800 70%,#080d1844)}
+.header{z-index:1;border-bottom:1px solid #ffffff0b}
+.header .eyebrow{color:#7c879b;font-size:8px;letter-spacing:1.9px}
+.header h1{color:#f3ead8;text-shadow:0 0 22px #f5d29a14}
+.sound-button{color:#778298;width:32px;height:32px;font-size:22px}
+.sound-button:hover{color:#f1d7a5}
+.todo-page{z-index:1;padding:24px 25px 88px;height:calc(100% - 191px)}
+.todo-page .task-area{height:100%}
+.todo-page .list-label{font-size:19px;font-weight:500;letter-spacing:1px;margin:0 0 22px;color:#e8eaf2}
+.todo-page .list-label>span:before{content:"✧";color:#d7bc89;font-size:19px;margin-right:9px}
+.todo-page .task-list{height:min(360px,calc(100svh - 345px));min-height:180px;max-height:100%;padding:0 1px;scrollbar-width:thin;scrollbar-color:#63708a33 transparent}
+.todo-page .task{height:59px;padding:0 16px;margin-bottom:10px;border:1px solid #b7c8e817;border-radius:15px;background:#111a2a70;box-shadow:0 6px 20px #0000000c;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);animation:none;transition:background .25s,border-color .25s}
+.todo-page .task:hover{background:#18243d8c;border-color:#b8c9e838}
+.todo-page .task-name{color:#d9deea;font-size:13px;letter-spacing:.3px;line-height:1.7}
+.todo-page .check{width:22px;height:22px;border:1px solid #909cb868;background:#0a112355;color:#e6cf9e;box-shadow:inset 0 0 7px #0003}
+.todo-page .task.done{background:#0e152357;border-color:#9cacc014}
+.todo-page .task.done .check{background:#e1c89719;border-color:#cfb78166;color:#e2c996;box-shadow:0 0 12px #e8c58c0c}
+.todo-page .task.done .task-name{color:#747f93;text-decoration-color:#7a849c8c}
+.todo-page .add-button{left:25px;right:25px;bottom:17px;height:54px;background:linear-gradient(115deg,#e8d7b6,#cfb68b);color:#192133;font-size:13px;font-weight:500;letter-spacing:.6px;border:1px solid #ffefcb44;border-radius:15px;box-shadow:0 5px 24px #cdb38116;transition:filter .25s,transform .25s}
+.add-button:hover{filter:brightness(1.07);transform:translateY(-1px)}
+.tab-bar{background:#0a101ce6;border-top:1px solid #ffffff0d;backdrop-filter:blur(15px);-webkit-backdrop-filter:blur(15px)}
+.tab{color:#748096}.tab.active{background:#e1c79a0d;color:#dac398}.tab.active span{filter:drop-shadow(0 0 6px #ddc79b44)}
+.composer-backdrop{background:#01040bab;backdrop-filter:blur(5px)}
+.composer{background:linear-gradient(145deg,#182235,#0e1626);border:1px solid #afc1e32b;box-shadow:0 20px 70px #0008}
+.composer .eyebrow{color:#b69f78}.composer h2{color:#e6e9f1;font-size:22px}.composer input{background:#07102088;border-color:#879db135;color:#e8ecf4;outline-color:#d7bc89}.composer input::placeholder{color:#6d7a92}.save-button{background:#dcc6a1;color:#192133}.close{color:#919bb0}
+@media(max-height:720px){.todo-page{height:calc(100% - 168px);padding-top:18px}.todo-page .list-label{margin-bottom:17px}.todo-page .task{height:55px}.todo-page .task-list{height:calc(100svh - 290px);min-height:170px}.todo-page .add-button{bottom:14px}}
+@media(prefers-reduced-motion:reduce){.todo-page .task,.add-button{transition:none}::view-transition-group(*){animation-duration:.01s}}

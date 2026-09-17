@@ -1,0 +1,35 @@
+.header{height:100px;padding:0;border-bottom:0;overflow:hidden;background:#010205}
+.todo-universe-backdrop{inset:auto 0 0;top:100px}
+.top-nav{position:relative;width:100%;height:100%;isolation:isolate}
+.top-nav .tab{position:absolute;top:0;bottom:0;width:calc(50% + 16px);min-width:0;height:100%;padding:0;background:#010205;border:0;border-radius:0;display:block;overflow:hidden;cursor:pointer;color:#a7afbe;transition:color .25s}
+.top-nav .tab[data-page="todo"]{left:0;clip-path:polygon(0 0,100% 0,calc(100% - 32px) 100%,0 100%)}
+.top-nav .tab[data-page="sky"]{right:0;clip-path:polygon(32px 0,100% 0,100% 100%,0 100%)}
+.top-nav .tab:after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at center,#01020555,transparent 75%),linear-gradient(180deg,#01020511,#01020522 50%,#01020599);pointer-events:none}
+.top-nav .tab.active{background:#010205;color:#f4dfb7}
+.top-nav .tab:focus-visible{outline:0;box-shadow:inset 0 0 0 2px #dcc7a1}
+.nav-picture{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 55%;border-radius:0;pointer-events:none;filter:saturate(.78) brightness(.75);transition:filter .3s,transform .5s}
+.top-nav .tab.active .nav-picture,.top-nav .tab:hover .nav-picture{filter:saturate(.9) brightness(1)}
+.top-nav .tab:hover .nav-picture{transform:scale(1.035)}
+.top-nav .tab .nav-label{position:absolute;z-index:1;top:50%;bottom:auto;left:0;right:0;transform:translateY(-50%) rotate(-9deg) skewX(-10deg) scaleX(.92);font-family:"Zhi Mang Xing","STXingkai","KaiTi",cursive;font-size:clamp(34px,10vw,46px);line-height:1.2;letter-spacing:-1px;filter:none;font-weight:400;padding-left:0;text-align:center;color:#edf0f5;text-shadow:0 1px 3px #010205,0 0 9px #01020599;transition:color .25s,text-shadow .25s}
+.top-nav .tab[data-page="sky"] .nav-label{transform:translateY(-50%) rotate(-7deg) skewX(-10deg) scaleX(.92)}
+.top-nav .tab[data-page="todo"]{z-index:2;background:transparent}
+.top-nav .tab[data-page="todo"] .nav-picture,.top-nav .tab[data-page="todo"]:after{mask-image:linear-gradient(90deg,#000 calc(100% - 64px),transparent 100%);-webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 64px),transparent 100%)}
+.top-nav .tab[data-page="sky"]{z-index:1;width:calc(50% + 64px);clip-path:none}
+.top-nav .tab[data-page="sky"] .nav-label{left:39px}
+.top-nav .tab.active .nav-label{color:#fff0ce;text-shadow:0 1px 3px #010205,0 0 10px #01020599,0 0 16px #efcf9a22}
+.top-nav .nav-divider{position:absolute;z-index:2;left:calc(50% - .5px);top:-3px;width:1px;height:calc(100% + 6px);background:linear-gradient(#d1c5ad22,#d1c5ad88,#d1c5ad22);transform:rotate(17.7deg);pointer-events:none}
+.page,.todo-page{height:calc(100% - 100px)}
+.todo-page{padding:14px 25px 100px}
+.todo-page .task-area{height:calc(100% - 42px)}
+.todo-page .task-list{height:100%;min-height:0;max-height:none;overflow-y:auto;scroll-padding-bottom:12px;display:flex;flex-direction:column;justify-content:space-between}
+.todo-page .task-list>.task{margin-bottom:0;flex:0 0 auto}
+.todo-page .task-list.dense>.task{height:50px;padding-top:0;padding-bottom:0}
+.todo-page .task-list.dense .task-name{font-size:12px}
+.time-wish{height:38px;margin:4px 0 0;display:flex;align-items:center;justify-content:center;color:#9ba3b3;font-family:"STXingkai","KaiTi",serif;font-size:17px;letter-spacing:1px;text-align:center;text-shadow:0 0 10px #b7c8e022}
+.todo-page .add-button{bottom:27px}
+.sky-page{padding-top:0;padding-bottom:0}
+.universe-readout{top:18px!important;font-size:10px;letter-spacing:2px}
+.constellation .drag-tip{bottom:28px}
+.composer h2{font-size:22px;margin-top:4px}
+@media(max-height:720px){.header{height:90px;padding:0}.todo-universe-backdrop{top:90px}.page,.todo-page{height:calc(100% - 90px)}.top-nav .nav-divider{transform:rotate(19.6deg)}.todo-page{padding-top:9px;padding-bottom:87px}.todo-page .add-button{bottom:22px}.todo-page .task-list{height:calc(100svh - 228px);min-height:150px}}
+@media(prefers-reduced-motion:reduce){.nav-picture{transition:none}.top-nav .tab:hover .nav-picture{transform:none}}

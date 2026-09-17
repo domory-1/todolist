@@ -1,0 +1,18 @@
+{
+  "name": "little-star-wishes",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "npm run build && node server.js",
+    "build": "esbuild universe.js --bundle --minify --format=esm --outfile=universe.bundle.js",
+    "build:models": "node scripts/build-models.mjs",
+    "build:font": "node scripts/subset-font.mjs"
+  },
+  "dependencies": {
+    "three": "0.160.1"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2",
+    "subset-font": "^2.7.0"
+  }
+}

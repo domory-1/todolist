@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#10122a" />
+    <title>小小星愿</title>
+    <link rel="preload" href="./assets/fonts/ZhiMangXing-subset.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./three-d.css" />
+    <link rel="stylesheet" href="./todo-simple.css" />
+    <link rel="stylesheet" href="./todo-scroll.css" />
+    <link rel="stylesheet" href="./star-theme.css" />
+    <link rel="stylesheet" href="./top-navigation.css" />
+    <link rel="stylesheet" href="./wish-effects.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="app-card" aria-label="小小星愿">
+        <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+        <header class="header">
+          <nav class="top-nav" aria-label="页面导航">
+            <button class="tab active" data-page="todo" type="button" aria-label="愿望清单" aria-pressed="true"><img class="nav-picture" src="./assets/nav-wishes-anime.png" alt="" /><span class="nav-label">愿望</span></button>
+            <span class="nav-divider" aria-hidden="true"></span>
+            <button class="tab" data-page="sky" type="button" aria-label="我的星空" aria-pressed="false"><img class="nav-picture" src="./assets/nav-space-anime.png" alt="" /><span class="nav-label">星空</span></button>
+          </nav>
+        </header>
+
+        <section class="page todo-page active" id="todoPage">
+          <div class="task-area"><ul class="task-list" id="taskList" aria-label="愿望清单"></ul></div>
+          <p class="time-wish" id="timeWish" aria-live="polite"></p>
+          <button class="add-button" id="openComposer" type="button"><span>＋</span> 写下愿望</button>
+        </section>
+
+        <section class="page sky-page" id="skyPage" aria-hidden="true">
+          <div class="constellation" id="constellation" aria-label="可拖动旋转的星空"><div class="stars" id="stars"></div><div class="drag-tip" id="dragTip">拖动 · 缩放</div></div>
+        </section>
+
+      </section>
+    </main>
+    <div class="composer-backdrop" id="composerBackdrop" aria-hidden="true"><form class="composer" id="composer"><button class="close" type="button" id="closeComposer" aria-label="关闭">×</button><h2>写个愿望</h2><input id="taskInput" aria-label="愿望" maxlength="80" autocomplete="off" placeholder="想做什么？" required /><button class="save-button" type="submit">收好</button></form></div>
+    <script src="./wish-effects.js"></script>
+    <script src="./app.js"></script>
+    <script type="module" src="./universe.bundle.js"></script>
+  </body>
+</html>
