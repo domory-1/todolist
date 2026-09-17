@@ -10,7 +10,7 @@
 .nav-picture{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 55%;border-radius:0;pointer-events:none;filter:saturate(.78) brightness(.75);transition:filter .3s,transform .5s}
 .top-nav .tab.active .nav-picture,.top-nav .tab:hover .nav-picture{filter:saturate(.9) brightness(1)}
 .top-nav .tab:hover .nav-picture{transform:scale(1.035)}
-.top-nav .tab .nav-label{position:absolute;z-index:1;top:50%;bottom:auto;left:0;right:0;transform:translateY(-50%) rotate(-9deg) skewX(-10deg) scaleX(.92);font-family:"Zhi Mang Xing","STXingkai","KaiTi",cursive;font-size:clamp(34px,10vw,46px);line-height:1.2;letter-spacing:-1px;filter:none;font-weight:400;padding-left:0;text-align:center;color:#edf0f5;text-shadow:0 1px 3px #010205,0 0 9px #01020599;transition:color .25s,text-shadow .25s}
+.top-nav .tab .nav-label{position:absolute;z-index:1;top:50%;bottom:auto;left:0;right:0;transform:translateY(-50%) rotate(-9deg) skewX(-10deg) scaleX(.92);font-family:"Zhi Mang Xing","STXingkai","KaiTi",cursive;font-size:clamp(26px,7.5vw,34px);line-height:1.2;letter-spacing:-1px;filter:none;font-weight:400;padding-left:0;text-align:center;color:#edf0f5;text-shadow:0 1px 3px #010205,0 0 9px #01020599;transition:color .25s,text-shadow .25s}
 .top-nav .tab[data-page="sky"] .nav-label{transform:translateY(-50%) rotate(-7deg) skewX(-10deg) scaleX(.92)}
 .top-nav .tab[data-page="todo"]{z-index:2;background:transparent}
 .top-nav .tab[data-page="todo"] .nav-picture,.top-nav .tab[data-page="todo"]:after{mask-image:linear-gradient(90deg,#000 calc(100% - 64px),transparent 100%);-webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 64px),transparent 100%)}
