@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "npm run build && node server.js",
-    "build": "esbuild universe.js --bundle --minify --format=esm --outfile=universe.bundle.js && node scripts/copy-dist.mjs",
+    "build": "node scripts/bundle-and-copy.mjs",
     "build:models": "node scripts/build-models.mjs",
     "build:font": "node scripts/subset-font.mjs"
   },
